@@ -1,0 +1,42 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "OpenAPI Document on Azure Functions",
+    "version": "1.0.0"
+  },
+  "host": "bfyocteam3jean.azurewebsites.net",
+  "basePath": "/api",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/api/v1/starfruit": {
+      "get": {
+        "tags": [
+          "GetProductId"
+        ],
+        "operationId": "Get",
+        "produces": [
+          "text/plain"
+        ],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "productId",
+            "description": "The product id",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The OK response",
+            "schema": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}
